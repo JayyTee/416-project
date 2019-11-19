@@ -1,0 +1,48 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Home</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  {% include 'Movies/header.html' %}
+</head>
+
+<body>
+   {% if messages %}
+     {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+   {% endif %}
+
+  {% include 'Movies/navbar.html' %}
+
+  <h1>Home Page</h1>
+<!--
+  * run this: python -m pip install django-crispy-forms before starting server
+  * the admin route uses username: admin,  password: adminpass123
+
+  * the header, footer, and navbar are like partials, edit their
+  template files to change anything on those sections, like js links and such.
+  the styles.css file has the css for every page (we may want to change it but this was just the easiest way).
+
+  * this page is a good place to add a function that makes api calls
+  and generates a list/form with the results. that will fulfill the
+  custom authentication part of the assignment.
+  the form function can create a list of selections and add them to that users list
+  in the db using ajax for example.
+
+  *we should use jquery to make ajax easier.
+
+  * we might want to add a condition so the search bar only shows on the index page.
+  -->
+  <footer>
+    {% include 'Movies/footer.html' %}
+  </footer>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Login</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+    {% include 'Movies/header.html' %}
+</head>
+
+<body>
+{% include 'Movies/navbar.html' %}
+{% load crispy_forms_tags %}
+<main>
+    <h2>You have logged out</h2>
+        <small class="text-muted">
+         <a class="ml-2" href="/login">Log in again?</a>
+        </small>
+    <div class ="border-top pt-3"></div>
+</main>
+
+  <footer>
+      {% include 'Movies/footer.html' %}
+  </footer>
+</body>
+</html>
